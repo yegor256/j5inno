@@ -1,3 +1,5 @@
+import java.util.Random;
+
 class Rand {
     private static char[] CHARS = {
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
