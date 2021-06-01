@@ -10,7 +10,7 @@ compile:
 
 tests:
 	cd test
-	for c in $$(ls *Test.class | gsed s/.class//); do
+	for c in $$(ls *Test.class | sed s/.class//); do
 		java -enableassertions -classpath .:../src $${c}
 	done
 	echo 'The build is CLEAN!'
