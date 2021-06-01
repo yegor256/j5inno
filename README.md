@@ -1,4 +1,4 @@
-[![make](https://github.com/yegor256/j7/actions/workflows/make.yml/badge.svg)](https://github.com/yegor256/j7/actions/workflows/make.yml)
+[![make](https://github.com/yegor256/j5/actions/workflows/make.yml/badge.svg)](https://github.com/yegor256/j5/actions/workflows/make.yml)
 
 There are seven Java classes with some unit tests.
 You are welcome to submit new tests and improve the classes,
