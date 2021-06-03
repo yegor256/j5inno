@@ -24,7 +24,7 @@ public class RandTest {
 
   public static void main(String... args) {
     for (int i = 0; i < property_ContainsOnlyUpperCaseLatinLetters_NUM_RUNS; i++) {
-      Rand.make(testStringLen);
+      assert property_ContainsOnlyUpperCaseLatinLetters(Rand.make(testStringLen));
     }
   }
 }
