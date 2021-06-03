@@ -1,5 +1,5 @@
 class Inverse {
-    private String text;
+    private final String text;
 
     public Inverse(String text) {
         this.text = text;
