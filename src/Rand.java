@@ -8,8 +8,9 @@ class Rand {
     };
     public static String make(int len) {
         String r = "";
-        for (int p = 0; p < len; p = p + 1) {
-            r = r + (char) new Random().nextInt(CHARS.length);
+        final Random random = new Random();
+        for (int p = 0; p < len; p++) {
+            r = r + CHARS[(char) random.nextInt(CHARS.length)];
         }
         return r;
     }
