@@ -9,7 +9,7 @@ class Rand {
     public static String make(int len) {
         String r = "";
         for (int p = 0; p < len; p = p + 1) {
-            r = r + (char) new Random().nextInt(26);
+            r = r + (char) new Random().nextInt(CHARS.length);
         }
         return r;
     }
