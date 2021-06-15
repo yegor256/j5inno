@@ -1,16 +1,20 @@
 .SHELLFLAGS = -e -c
 
+# Running under Windows ?
+ifeq ($(OS), Windows_NT)
+SEP = ;
+else
+SEP = :
+endif
+
 .ONESHELL:
 
 all: compile tests
 
 compile:
-	javac src/*.java
-	javac -classpath src test/*.java
+	javac -encoding UTF8 src/*.java
+	javac -encoding UTF8 -classpath src test/*.java
 
 tests:
-	cd test
-	for c in $$(ls *Test.class | sed s/.class//); do
-		java -enableassertions -classpath .:../src $${c}
-	done
-	echo 'The build is CLEAN!'
+	java -ea -cp "$(realpath test)$(SEP)$(realpath src)" $(notdir $(basename $(wildcard test/*Test.class)))
+	$(system echo The build is CLEAN!)
